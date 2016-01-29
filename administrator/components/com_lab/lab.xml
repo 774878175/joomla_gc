@@ -21,9 +21,23 @@
 	<files folder="site">
 		<filename>index.html</filename>
 	</files>
+
+	<languages folder="site">
+		<language tag="zh-CN">language/zh-CN.com_lab.ini</language>
+	</languages>
 	
 	<administration>
 		<menu img="class:categories">COM_LAB_MENU</menu>
+		<submenu>
+			<menu link="option=com_lab&amp;view=lab&amp;layout=edit"
+				img="class:genetic">
+				COM_LAB_ADD_LAB
+			</menu>
+			<menu link="option=com_lab&amp;view=preview"
+			 img="class:genetic" alt="Lab/Preview">
+				COM_LAB_PREVIEW
+			</menu>
+		</submenu>
 		<files folder="admin">
 			<filename>access.xml</filename>
 			<filename>config.xml</filename>

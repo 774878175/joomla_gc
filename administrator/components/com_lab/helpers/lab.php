@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 class LabHelper{
 	public static function getActions($categoryId=0){
 		$user = JFactory::getUser();
-		$result = new JObject;
+		$result = new JObject();
 
 		if(empty($categoryId)){
 			$assetName = 'com_lab';
@@ -22,6 +22,14 @@ class LabHelper{
 		}
 
 		return $result;
+	}
+
+	public static function addSubmenu($vName = 'labs'){
+		JHtmlSidebar::addEntry(
+			JText::_('COM_LAB_SUBMENU_PREVIEW'),
+			'index.php?option=com_lab&view=preview',
+			$vName == 'preview'
+		);
 	}
 }
 

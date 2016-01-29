@@ -1,16 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fieldset>
-		<field name="lid" type="text" default="0" 
-		label="JGLOBAL_FIELD_ID_LABEL"
-		readonly="true" class="readonly"
-		description="JGLOBAL_FIELD_ID_DESC"
+	<fieldset name="myfields">
+		<field name="id" type="text" default="" 
+		 label="COM_LAB_FIELD_ID_LABEL"
+		 readonly="true" class="readonly"
+		 description="COM_LAB_FIELD_ID_DESC"
 		/>
 
 		<field name="labname" type="text" class="inputbox"
-		size="40" label="JGLOBAL_LABNAME"
-		description="COM_LAB_FIELD_LABNAME_DESC" required="true"
+		 size="40" label="COM_LAB_FIELD_LABNAME_LABEL"
+		 description="COM_LAB_FIELD_LABNAME_DESC" required="true"
 		/>
-		D
+
+		<field name="lno" type="text" class="inputbox"
+		 size="40" label="COM_LAB_FIELD_LNO_LABEL"
+		 description="COM_LAB_FIELD_LNO_DESC"
+		/>
+
+		<field name="place" type="text" class="inputbox"
+		 size="40" label="COM_LAB_FIELD_PLACE_LABEL"
+		 description="COM_LAB_FIELD_PLACE_DESC"
+		/>
+
+		<field name="state" type="list" label="JSTATUS" description="JFILED_PUBLISHED_DESC"
+			 class="inputbox small" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="pic" type="media" directory="labs" 
+		 hide_none="1"
+		 label="COM_LAB_FIELD_PIC_LABEL"
+		 description="COM_LAB_FIELD_PIC_DESC" />
+
+		 <field name="pnumber" type="text" class="inputbox" 
+		 label="COM_LAB_FIELD_PNUMBER_LABEL"
+		 description="COM_LAB_FIELD_PNUMBER_DESC" />
+
+		 <field name="admin" type="text" class="inputbox" 
+		 label="COM_LAB_FIELD_ADMIN_LABEL"
+		 description="COM_LAB_FIELD_ADMIN_DESC" />
+
+		 <field name="description" type="textarea" class="inputbox" 
+		 rows="6" cols="100" label="JGLOBAL_DESCRIPTION"
+		 description="COM_LAB_FIELD_DESCRITION_DESC" />
+
+		<field name="phone" type="tel" class="inputbox" 
+		 label="COM_LAB_FIELD_PHONE_LABEL"
+		 description="COM_LAB_FIELD_PHONE_DESC" />
+
+		 <field name="email" type="email" class="inputbox" 
+		 label="COM_LAB_FIELD_EMAIL_LABEL"
+		 description="COM_LAB_FIELD_EMAIL_DESC" />
+
+		 <field name="booktime" type="text" class="inputbox" 
+		 label="COM_LAB_FIELD_BOOKTIME_LABEL"
+		 description="COM_LAB_FIELD_BOOKTIME_DESC" required="true" />
+
+		<field name="bookday" type="text" class="inputbox" 
+		 label="COM_LAB_FIELD_BOOKDAY_LABEL"
+		 description="COM_LAB_FIELD_BOOKDAY_DESC" required="true" />
+
+		 <field name="opendate" type="calendar" class="inputbox" 
+		 size="22" format="%Y-%m-%d" filter="user_utc"
+		 label="COM_LAB_FIELD_OPENDATE_LABEL"
+		 description="COM_LAB_FIELD_OPENDATE_DESC" required="true" />
+
+		 <field name="closedate" type="calendar" class="inputbox" 
+		 size="22" format="%Y-%m-%d" filter="user_utc"
+		 label="COM_LAB_FIELD_CLOSEDATE_LABEL"
+		 description="COM_LAB_FIELD_CLOSEDATE_DESC" required="true" />
+
+		<field name="description" type="textarea" class="inputbox" 
+		 rows="6" cols="100" label="JGLOBAL_DESCRIPTION"
+		 description="COM_LAB_FIELD_DESCRITION_DESC" />
+
 	</fieldset>
 </form>

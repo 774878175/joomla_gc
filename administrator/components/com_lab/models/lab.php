@@ -6,7 +6,7 @@ class LabModelLab extends JModelAdmin{
 	protected $text_prefix = 'COM_LAB';
 
 	public function getTable($type='Lab', $prefix='LabTable', $config=array()){
-		return JTable::getInstanse($type, $prefix, $config);
+		return JTable::getInstance($type, $prefix, $config);
 	}
 
 	public function getForm($data=array(), $loadData = true){
@@ -33,5 +33,10 @@ class LabModelLab extends JModelAdmin{
 	protected function prepareTable($table){
 		$table->labname = htmlspecialchars_decode($table->labname, ENT_QUOTES);
 	}
+
+	/*public function save($data){
+		parent::save($data);
+		return true;
+	}*/
 }
 
