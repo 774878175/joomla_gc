@@ -1,0 +1,22 @@
+
+.lab_labname{
+	color: black;
+	font-family: 'Titillium Maps',Arial;
+	font-size: 14pt;
+	text-align: center;
+}
+
+.mylab{
+	padding-bottom: 20px;
+	float: left;
+	padding-right: 20px;
+}
+
+.lab_element{
+	width: 150px;
+	padding-top: 2px;
+}
+
+.link:hover{
+	text-decoration: none;
+}

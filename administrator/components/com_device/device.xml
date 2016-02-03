@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.1" method="upgrade">
-	<name>com_lab</name>
+	<name>com_device</name>
 	<author>std software htl</author>
 	<creationDate>2016</creationDate>
 	<copyright>(C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
@@ -8,7 +8,7 @@
 	<authorEmail>joomla for std</authorEmail>
 	<authorUrl>www.stdu.edu.cn</authorUrl>
 	<version>1.0.0</version>
-	<description>COM_LAB_XML_DESCRIPTION</description>
+	<description>COM_DEVICE_XML_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<install>
 		<sql>
@@ -20,39 +20,29 @@
 
 	<files folder="site">
 		<filename>index.html</filename>
-		<filename>controller.php</filename>
-		<filename>lab.php</filename>
-		<folder>controllers</folder>
-		<folder>models</folder>
-		<folder>views</folder>
-		<folder>language</folder>
 	</files>
 
-	<media destination="com_lab" folder="media">
-		<folder>css</folder>
-	</media>
-
 	<languages folder="site">
-		<language tag="zh-CN">language/zh-CN.com_lab.ini</language>
+		<language tag="zh-CN">language/zh-CN.com_device.ini</language>
 	</languages>
 	
 	<administration>
-		<menu img="class:categories">COM_LAB_MENU</menu>
+		<menu img="class:categories">COM_DEVICE_MENU</menu>
 		<submenu>
-			<menu link="option=com_lab&amp;view=lab&amp;layout=edit"
+			<menu link="option=com_device&amp;view=device&amp;layout=edit"
 				img="class:genetic">
-				COM_LAB_ADD_LAB
+				COM_DEVICE_ADD_DEVICE
 			</menu>
-			<menu link="option=com_lab&amp;view=preview"
-			 img="class:genetic" alt="Lab/Preview">
-				COM_LAB_PREVIEW
+			<menu link="option=com_device&amp;view=preview"
+			 img="class:genetic" alt="Device/Preview">
+				COM_DEVICE_PREVIEW
 			</menu>
 		</submenu>
 		<files folder="admin">
 			<filename>access.xml</filename>
 			<filename>config.xml</filename>
 			<filename>controller.php</filename>
-			<filename>lab.php</filename>
+			<filename>device.php</filename>
 			<folder>controllers</folder>
 			<folder>helpers</folder>
 			<folder>models</folder>
@@ -62,8 +52,8 @@
 		</files>
 
 		<languages folder="admin">
-			<language tag="zh-CN">language/zh-CN/zh-CN.com_lab.ini</language>
-			<language tag="zh-CN">language/zh-CN/zh-CN.com_lab.sys.ini</language>
+			<language tag="zh-CN">language/zh-CN/zh-CN.com_device.ini</language>
+			<language tag="zh-CN">language/zh-CN/zh-CN.com_device.sys.ini</language>
 		</languages>
 	</administration>
 </extension>

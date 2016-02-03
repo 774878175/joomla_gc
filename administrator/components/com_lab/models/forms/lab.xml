@@ -43,10 +43,6 @@
 		 label="COM_LAB_FIELD_ADMIN_LABEL"
 		 description="COM_LAB_FIELD_ADMIN_DESC" />
 
-		 <field name="description" type="textarea" class="inputbox" 
-		 rows="6" cols="100" label="JGLOBAL_DESCRIPTION"
-		 description="COM_LAB_FIELD_DESCRITION_DESC" />
-
 		<field name="phone" type="tel" class="inputbox" 
 		 label="COM_LAB_FIELD_PHONE_LABEL"
 		 description="COM_LAB_FIELD_PHONE_DESC" />

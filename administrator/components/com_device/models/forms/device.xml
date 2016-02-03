@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="myfields">
+		<field name="id" type="text" default="" 
+		 label="COM_DEVICE_FIELD_ID_LABEL"
+		 readonly="true" class="readonly"
+		 description="COM_DEVICE_FIELD_ID_DESC"
+		/>
+
+		<field name="devicename" type="text" class="inputbox"
+		 size="40" label="COM_DEVICE_FIELD_DEVICENAME_LABEL"
+		 description="COM_DEVICE_FIELD_DEVICENAME_DESC" required="true"
+		/>
+
+		<field name="dno" type="text" class="inputbox"
+		 size="40" label="COM_DEVICE_FIELD_DNO_LABEL"
+		 description="COM_DEVICE_FIELD_DNO_DESC"
+		/>
+
+		<field name="labname" type="category" class="inputbox"
+		 extension="com_lab" default=""
+		 label="COM_DEVICE_FIELD_LABNAME_LABEL"
+		 description="COM_DEVICE_FIELD_LABNAME_DESC"
+		>
+			<option value="">JOPTION_SELECT_CATEGORY</option>
+		</field>
+
+		<field name="state" type="list" label="JSTATUS" description="JFILED_PUBLISHED_DESC"
+			 class="inputbox small" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="pic" type="media" directory="devices" 
+		 hide_none="1"
+		 label="COM_DEVICE_FIELD_PIC_LABEL"
+		 description="COM_DEVICE_FIELD_PIC_DESC" />
+
+		 <field name="mode" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_MODE_LABEL"
+		 description="COM_DEVICE_FIELD_MODE_DESC" />
+
+		 <field name="standard" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_STANDARD_LABEL"
+		 description="COM_DEVICE_FIELD_STANDARD_DESC" />
+
+		 <field name="importdate" type="calendar" class="inputbox" 
+		 size="22" format="%Y-%m-%d" filter="user_utc"
+		 label="COM_DEVICE_FIELD_IMPORTDATE_LABEL"
+		 description="COM_DEVICE_FIELD_IMPORTDATE_DESC" />
+
+		 <field name="origin" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_ORIGIN_LABEL"
+		 description="COM_DEVICE_FIELD_ORIGIN_DESC" />
+
+		 <field name="inprice" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_INPRICE_LABEL"
+		 description="COM_DEVICE_FIELD_INPRICE_DESC" />
+
+		 <field name="outprice" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_OUTPRICE_LABEL"
+		 description="COM_DEVICE_FIELD_OUTPRICE_DESC" />
+
+		 <field name="admin" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_ADMIN_LABEL"
+		 description="COM_DEVICE_FIELD_ADMIN_DESC" />
+
+		<field name="phone" type="tel" class="inputbox" 
+		 label="COM_DEVICE_FIELD_PHONE_LABEL"
+		 description="COM_DEVICE_FIELD_PHONE_DESC" />
+
+		 <field name="email" type="email" class="inputbox" 
+		 label="COM_DEVICE_FIELD_EMAIL_LABEL"
+		 description="COM_DEVICE_FIELD_EMAIL_DESC" />
+
+		 <field name="booktime" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_BOOKTIME_LABEL"
+		 description="COM_DEVICE_FIELD_BOOKTIME_DESC" required="true" />
+
+		<field name="bookday" type="text" class="inputbox" 
+		 label="COM_DEVICE_FIELD_BOOKDAY_LABEL"
+		 description="COM_DEVICE_FIELD_BOOKDAY_DESC" required="true" />
+
+		 <field name="opendate" type="calendar" class="inputbox" 
+		 size="22" format="%Y-%m-%d" filter="user_utc"
+		 label="COM_DEVICE_FIELD_OPENDATE_LABEL"
+		 description="COM_DEVICE_FIELD_OPENDATE_DESC" required="true" />
+
+		 <field name="closedate" type="calendar" class="inputbox" 
+		 size="22" format="%Y-%m-%d" filter="user_utc"
+		 label="COM_DEVICE_FIELD_CLOSEDATE_LABEL"
+		 description="COM_DEVICE_FIELD_CLOSEDATE_DESC" required="true" />
+
+		<field name="description" type="textarea" class="inputbox" 
+		 rows="6" cols="100" label="JGLOBAL_DESCRIPTION"
+		 description="COM_DEVICE_FIELD_DESCRITION_DESC" />
+
+	</fieldset>
+</form>

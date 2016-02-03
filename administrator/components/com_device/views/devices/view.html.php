@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die;
 
-class LabViewLabs extends JViewLegacy{
+class DeviceViewDevices extends JViewLegacy{
 	protected $items;
 	protected $state;
 	protected $pagination;
@@ -12,7 +12,7 @@ class LabViewLabs extends JViewLegacy{
 		$this->state = $this->get('State');
 		$this->pagination = $this->get('Pagination');
 
-		LabHelper::addSubmenu('labs');
+		DeviceHelper::addSubmenu('devices');
 		
 		if(count($errors = $this->get('Errors'))){
 			JError::raiseError(500, implode("\n", $errors));
@@ -25,21 +25,21 @@ class LabViewLabs extends JViewLegacy{
 	}
 
 	protected function addToolbar(){
-		$canDo = LabHelper::getActions();
+		$canDo = DeviceHelper::getActions();
 		$bar = JToolBar::getInstance('toolbar');
 
-		JToolbarHelper::title(JText::_('COM_LAB_MANAGER_LABS'), 'folder categories');
-		JToolbarHelper::addNew('lab.add');
+		JToolbarHelper::title(JText::_('COM_DEVICE_MANAGER_DEVICES'), 'folder categories');
+		JToolbarHelper::addNew('device.add');
 
 		if($canDo->get('core.edit')){
-			JToolbarHelper::editList('lab.edit');
+			JToolbarHelper::editList('device.edit');
 		}
 
 		if($canDo->get('core.edit.state')){
-			JToolbarHelper::publish('labs.publish', 'JTOOLBAR_PUBLISH', true);
-			JToolbarHelper::unpublish('labs.unpublish', 'JTOOLBAR_UNPUBLISH', true);
-			JToolbarHelper::archiveList('labs.archive');
-			JToolbarHelper::checkin('labs.checkin');
+			JToolbarHelper::publish('devices.publish', 'JTOOLBAR_PUBLISH', true);
+			JToolbarHelper::unpublish('devices.unpublish', 'JTOOLBAR_UNPUBLISH', true);
+			JToolbarHelper::archiveList('devices.archive');
+			JToolbarHelper::checkin('devices.checkin');
 		}
 
 		/*将信息直接删除
@@ -49,16 +49,16 @@ class LabViewLabs extends JViewLegacy{
 
 		$state = $this->get('State');
 		if($state->get('filter.state')==-2 && $canDo->get('core.delete')){
-			JToolbarHelper::deleteList('', 'labs.delete', 'JTOOLBAR_EMPTY_TRASH');
+			JToolbarHelper::deleteList('', 'devices.delete', 'JTOOLBAR_EMPTY_TRASH');
 		}else if($canDo->get('core.edit.state')){
-			JToolbarHelper::trash('labs.trash');
+			JToolbarHelper::trash('devices.trash');
 		}
 
 		if($canDo->get('core.admin')){
-			JToolbarHelper::preferences('com_lab');
+			JToolbarHelper::preferences('com_device');
 		}
 		
-		JHtmlSidebar::setAction('index.php?option=com_lab&view=labs');
+		JHtmlSidebar::setAction('index.php?option=com_device&view=devices');
 
 		JHtmlSidebar::addFilter(
 			JText::_('JOPTION_SELECT_PUBLISHED'),
@@ -70,8 +70,8 @@ class LabViewLabs extends JViewLegacy{
 
 	protected function getSortFields(){
 		return array(
-		'a.labname' => Jtext::_('COM_LAB_FIELD_LABNAME_LABEL'),
-		'a.lno' => JText::_('COM_LAB_FIELD_LNO_LABEL')
+		'a.devicename' => Jtext::_('COM_DEVICE_FIELD_DEVICENAME_LABEL'),
+		'a.dno' => JText::_('COM_DEVICE_FIELD_DNO_LABEL')
 		);
 	}
 }

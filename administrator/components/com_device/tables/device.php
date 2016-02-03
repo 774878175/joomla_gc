@@ -2,10 +2,10 @@
 
 defined('_JEXEC') or die;
 
-class LabTableLab extends JTable{
+class DeviceTableDevice extends JTable{
 
 	public function __construct(&$db){
-		parent::__construct('#__lab', 'id', $db);
+		parent::__construct('#__device', 'id', $db);
 	}
 
 	public function bind($array, $ignore=''){
@@ -54,6 +54,5 @@ class LabTableLab extends JTable{
 
 		return true;
 	}
-	
 }
 
